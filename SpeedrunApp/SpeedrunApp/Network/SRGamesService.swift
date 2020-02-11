@@ -11,7 +11,7 @@ import Foundation
 extension SRGamesService: SRService {
     var path: String {
         switch self {
-        case .allGames: return "games"
+        case .allGames: return "games/v1pxjz68"
         }
     }
 

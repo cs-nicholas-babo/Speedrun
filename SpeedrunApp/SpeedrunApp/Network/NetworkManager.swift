@@ -15,7 +15,7 @@ protocol NetworkManagerType {
 }
 
 final class NetworkManager: NetworkManagerType {
-    private var baseURL: String = "https://www.speedrun.com/"
+    private var baseURL: String = "https://www.speedrun.com/api/v1/"
 
     private var successCodes: Range<Int> = 200..<299
 
@@ -53,13 +53,11 @@ final class NetworkManager: NetworkManagerType {
 //        ]
 
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("*/*", forHTTPHeaderField: "Accept")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("Speedrun iOS App", forHTTPHeaderField: "User-Agent")
 
-        request.addValue("no-cache", forHTTPHeaderField: "Cache-Control")
-        request.addValue("gzip, deflate, br", forHTTPHeaderField: "Accept-Encoding")
         request.addValue("www.speedrun.com", forHTTPHeaderField: "Host")
-        request.addValue("keep-alive", forHTTPHeaderField: "Connection")
+        request.addValue("vpvo3fboij7ny40x6qfyb5enh", forHTTPHeaderField: "X-API-Key")
 
         return request
     }
