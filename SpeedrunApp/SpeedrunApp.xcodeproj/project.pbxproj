@@ -13,6 +13,12 @@
 		A104619E23F33ACC0073A1D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A104619C23F33ACC0073A1D9 /* Main.storyboard */; };
 		A10461A023F33ACF0073A1D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A104619F23F33ACF0073A1D9 /* Assets.xcassets */; };
 		A10461A323F33ACF0073A1D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A10461A123F33ACF0073A1D9 /* LaunchScreen.storyboard */; };
+		A10461AD23F33B590073A1D9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10461AC23F33B590073A1D9 /* Coordinator.swift */; };
+		A10461B023F33E2D0073A1D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10461AF23F33E2D0073A1D9 /* NetworkManager.swift */; };
+		A10461B223F33E790073A1D9 /* SRGamesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10461B123F33E790073A1D9 /* SRGamesService.swift */; };
+		A10461B523F340690073A1D9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10461B423F340690073A1D9 /* Game.swift */; };
+		A10461B823F34CC40073A1D9 /* SRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10461B723F34CC40073A1D9 /* SRService.swift */; };
+		A10461BA23F34FB40073A1D9 /* SRError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10461B923F34FB40073A1D9 /* SRError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		A104619F23F33ACF0073A1D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10461A223F33ACF0073A1D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A10461A423F33ACF0073A1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10461AC23F33B590073A1D9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A10461AF23F33E2D0073A1D9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A10461B123F33E790073A1D9 /* SRGamesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRGamesService.swift; sourceTree = "<group>"; };
+		A10461B423F340690073A1D9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		A10461B723F34CC40073A1D9 /* SRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRService.swift; sourceTree = "<group>"; };
+		A10461B923F34FB40073A1D9 /* SRError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,10 @@
 		A104619523F33ACC0073A1D9 /* SpeedrunApp */ = {
 			isa = PBXGroup;
 			children = (
+				A10461B323F340600073A1D9 /* Models */,
+				A10461AE23F33E200073A1D9 /* DesignSystem */,
+				A10461AB23F33B4F0073A1D9 /* Util */,
+				A10461AA23F33B250073A1D9 /* Network */,
 				A104619623F33ACC0073A1D9 /* AppDelegate.swift */,
 				A104619823F33ACC0073A1D9 /* SceneDelegate.swift */,
 				A104619A23F33ACC0073A1D9 /* ViewController.swift */,
@@ -65,6 +81,48 @@
 				A10461A423F33ACF0073A1D9 /* Info.plist */,
 			);
 			path = SpeedrunApp;
+			sourceTree = "<group>";
+		};
+		A10461AA23F33B250073A1D9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A10461B623F34CB90073A1D9 /* SRService */,
+				A10461AF23F33E2D0073A1D9 /* NetworkManager.swift */,
+				A10461B123F33E790073A1D9 /* SRGamesService.swift */,
+				A10461B923F34FB40073A1D9 /* SRError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A10461AB23F33B4F0073A1D9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A10461AC23F33B590073A1D9 /* Coordinator.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		A10461AE23F33E200073A1D9 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		A10461B323F340600073A1D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A10461B423F340690073A1D9 /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A10461B623F34CB90073A1D9 /* SRService */ = {
+			isa = PBXGroup;
+			children = (
+				A10461B723F34CC40073A1D9 /* SRService.swift */,
+			);
+			path = SRService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +196,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10461B823F34CC40073A1D9 /* SRService.swift in Sources */,
+				A10461B223F33E790073A1D9 /* SRGamesService.swift in Sources */,
+				A10461AD23F33B590073A1D9 /* Coordinator.swift in Sources */,
+				A10461B523F340690073A1D9 /* Game.swift in Sources */,
+				A10461BA23F34FB40073A1D9 /* SRError.swift in Sources */,
 				A104619B23F33ACC0073A1D9 /* ViewController.swift in Sources */,
+				A10461B023F33E2D0073A1D9 /* NetworkManager.swift in Sources */,
 				A104619723F33ACC0073A1D9 /* AppDelegate.swift in Sources */,
 				A104619923F33ACC0073A1D9 /* SceneDelegate.swift in Sources */,
 			);
